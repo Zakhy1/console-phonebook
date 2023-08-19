@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Oleg",
+    "surname": "Mongo",
+    "patronymic": "Olegovich",
+    "organization-name": "Apple",
+    "work-phone": "35-65-45",
+    "personal-phone": "+7-912-345-65-94"
+  },
+  {
+    "name": "Maxim",
+    "surname": "Jobs",
+    "patronymic": "Ivanovich",
+    "organization-name": "Google",
+    "work-phone": "57-75-43",
+    "personal-phone": "+7-954-453-34-54"
+  }
+]
