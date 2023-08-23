@@ -1,18 +1,1 @@
-[
-  {
-    "name": "Oleg",
-    "surname": "Mongo",
-    "patronymic": "Olegovich",
-    "organization-name": "Apple",
-    "work-phone": "35-65-45",
-    "personal-phone": "+7-912-345-65-94"
-  },
-  {
-    "name": "Maxim",
-    "surname": "Jobs",
-    "patronymic": "Ivanovich",
-    "organization-name": "Google",
-    "work-phone": "57-75-43",
-    "personal-phone": "+7-954-453-34-54"
-  }
-]
+[{"name": "Oleg", "surname": "Mongo", "patronymic": "Olegovich", "organization-name": "Apple", "work-phone": "35-65-45", "personal-phone": "+7-912-345-65-94"}, {"name": "Maxim", "surname": "Jobs", "patronymic": "Ivanovich", "organization-name": "Google", "work-phone": "57-75-43", "personal-phone": "+7-954-453-34-54"}, {"name": "123", "surname": "123", "patronymic": "231", "organization-name": "123", "work-phone": "21", "personal-phone": "2"}, {"name": "234", "surname": "54", "patronymic": "54", "organization-name": "4", "work-phone": "5", "personal-phone": "4"}, {"name": "0", "surname": "4", "patronymic": "3", "organization-name": "4", "work-phone": "3", "personal-phone": "4"}]
