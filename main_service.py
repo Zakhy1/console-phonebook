@@ -18,7 +18,7 @@ class PhoneBookService(PhoneBookBase):
         self.fields = {1: "name", 2: "surname", 3: "patronymic", 4: "organization_name", 5: "work_phone",
                        6: "personal_phone"}
 
-    def get_all_persons(self) -> list[str]:  # todo test 2 layers
+    def get_all_persons(self) -> list[str]:
         paginate_by = 2
         persons = self.file_repository.get_all()
         pages = ceil(len(persons) / 2)
@@ -76,7 +76,7 @@ class PhoneBookService(PhoneBookBase):
         person = self.find_person()
         if person:
             user_input = input("Введите поля, которые хотите изменить через пробел: ")
-            num_fields = [int(i) for i in user_input.split()]  # todo вынести в отдельный метод
+            num_fields = [int(i) for i in user_input.split()]
             fields = [self.fields[i] for i in num_fields]
             kwargs = {}
 
@@ -93,7 +93,7 @@ class PhoneBookService(PhoneBookBase):
     def find_person(self) -> dict | str:
         self.output_repository.print_menu_for_find()
         user_input = input("Характеристики поиска: ")
-        num_fields = [int(i) for i in user_input.split()]  # todo вынести в отдельный метод
+        num_fields = [int(i) for i in user_input.split()]
         fields = [self.fields[i] for i in num_fields]
         kwargs = {}
 
