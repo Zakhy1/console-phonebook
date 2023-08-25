@@ -1,5 +1,6 @@
 from crud import PhoneBookCrud
-from service import PhoneBookService
+from main_service import PhoneBookService
+from output_repository import OutputRepository
 
 
 def print_main_menu() -> None:
@@ -12,23 +13,26 @@ def print_main_menu() -> None:
 
 def main() -> None:
     print_main_menu()
-    service = PhoneBookService("data.json", PhoneBookCrud)
+    service = PhoneBookService("data.json")
     while True:
         user_input = int(input())
         if user_input == 1:
-            print(service.get_all_persons())
+            service.get_all_persons()
             main()
         elif user_input == 2:
-            print(service.add_person())
+            service.add_person()
             main()
         elif user_input == 3:
-            print(3)
+            service.edit_person()
+            main()
         elif user_input == 4:
-            print(4)
+            service.find_person()
+            main()
         elif user_input == 0:
             break
         else:
             print("Неизвестная команда")
 
 
-main()
+if __name__ == '__main__':
+    main()
