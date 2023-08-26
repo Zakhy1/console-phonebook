@@ -1,34 +1,26 @@
-from crud import PhoneBookCrud
 from main_service import PhoneBookService
 from output_repository import OutputRepository
 
 
-def print_main_menu() -> None:
-    print("1. Вывод записей из справочника")
-    print("2. Добавление новой записи в справочник")
-    print("3. Редактирование записей в справочнике")
-    print("4. Поиск записей по характеристикам")
-    print("0. Выход")
-
-
 def main() -> None:
-    print_main_menu()
-    service = PhoneBookService("data.json")
+    """Запускает основной цикл программы"""
+    OutputRepository.print_main_menu()
+    service = PhoneBookService("example.json")
     while True:
         user_input = int(input())
-        if user_input == 1:
+        if user_input == 1:  # Постраничный вывод
             service.get_all_persons()
-            main()
-        elif user_input == 2:
+            main()  # После выполнения метода -> возврат в основной цикл
+        elif user_input == 2:  # Добавление записи
             service.add_person()
             main()
-        elif user_input == 3:
+        elif user_input == 3:  # Редактирование записи
             service.edit_person()
             main()
-        elif user_input == 4:
+        elif user_input == 4:  # Поиск записи
             service.find_person()
             main()
-        elif user_input == 0:
+        elif user_input == 0:  # Выход из цикла
             break
         else:
             print("Неизвестная команда")

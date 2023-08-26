@@ -1,5 +1,5 @@
 class OutputRepository:
-
+    """Класс занимается выводом в консоль"""
     @staticmethod
     def print_menu_for_pages():
         print("Для просмотра следующей страницы введите 1: ")
@@ -43,6 +43,7 @@ class OutputRepository:
         for key, value in person.items():
             print("{0}: {1}".format(key, value))
         return person
+
     @staticmethod
     def print_message_for_edit():
         print("Для изменения записи необходимо ввести характеристики поиска")
@@ -52,9 +53,18 @@ class OutputRepository:
         print("Запись не найдена")
 
     @staticmethod
-    def print_edit_sucess():
+    def print_edit_success():
         print("Запись изменена")
 
     @staticmethod
     def unknown_command():
         print("Неизвестная команда")
+
+    @staticmethod
+    def print_main_menu() -> None:
+        """Выводит главное меню"""
+        print("1. Вывод записей из справочника")
+        print("2. Добавление новой записи в справочник")
+        print("3. Редактирование записей в справочнике")
+        print("4. Поиск записей по характеристикам")
+        print("0. Выход")
